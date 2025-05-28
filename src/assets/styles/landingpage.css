@@ -1,0 +1,116 @@
+.landingpage {
+    & .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+
+      
+            & .bg-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                z-index: -1;
+                pointer-events: none;
+            }
+        
+
+        & .text {
+
+            width: 50%;
+            min-height: 40vh;
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 15vh;
+            right: 5vh;
+
+            & h1 {
+                top: 10vw;
+                font-size: 20vh;
+                margin-left: -10vh;
+                text-shadow: 2px 2px 5px 10px gray;
+                color: rgba(137, 4, 42, 0.557);
+            }
+
+            & .login-btn {
+
+                width: 20vw;
+                height: 10vh;
+                color: aliceblue;
+                margin-top: 15vh;
+
+
+                & button {
+                    width: 100%;
+                    height: 100%;
+                    padding: 1vh;
+                    border-radius: 2vh;
+                    background: linear-gradient(rgba(243, 212, 11, 0.187), white);
+                    font-size: 5vh;
+                    cursor: pointer;
+                    box-shadow: 2px 2px black;
+                }
+
+                & button:hover {
+                    box-shadow: inset 2px 2px black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+    .landingpage .container .text {
+        width: 70%;
+        right: 10vh;
+    }
+    
+    .landingpage .container .text h1{
+        font-size: 13vh;
+        margin-left: 0;
+        
+    }
+
+    .landingpage .container .text .login-btn {
+        width: 30vw;
+        height: 8vh;
+        margin-left: 10vh;
+    }
+
+    .landingpage .container .text .login-btn button {
+        font-size: 3.5vh;
+    }
+}
+
+@media screen and (max-width: 799px) and (min-width: 301px) {
+    .landingpage .container .text {
+        width: 90%;
+        right: 5%;
+        top: 25vh;
+        left: 2vh;
+        text-align: center;
+    } 
+
+
+    .landingpage .container .text h1 {
+        font-size: 10vh;
+        margin-left: 0;
+    }
+
+    .landingpage .container .text .login-btn {
+        width: 40vw;
+        height: 7vh;
+        margin-top: -2vh;
+        margin-left: 8vh;
+    }
+
+    .landingpage .container .text .login-btn button {
+        font-size: 3vh;
+    }
+}
